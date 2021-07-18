@@ -29,10 +29,10 @@ public class DataHelp {
         private String number;
     }
 
-    public static Card getCard_1() { return new Card("5559 0000 0000 0001");
+    public static Card getCard1() { return new Card("5559 0000 0000 0001");
     }
 
-    public static Card getCard_2() { return new Card("5559 0000 0000 0002");
+    public static Card getCard2() { return new Card("5559 0000 0000 0002");
     }
 
 }

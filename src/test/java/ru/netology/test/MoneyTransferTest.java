@@ -1,6 +1,7 @@
 package ru.netology.test;
 
-import lombok.val;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ru.netology.data.DataHelp;
 import ru.netology.page.LoginPage;
@@ -9,10 +10,13 @@ import static com.codeborne.selenide.Selenide.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoneyTransferTest {
+    @BeforeEach
+    void befor (){
+        open("http://localhost:9999");
+    }
 
     @Test
     void shouldTransferMoneyBetweenOwnCardsFromtheSecondTotheFirst() {
-        open("http://localhost:9999");
         var loginPage = new LoginPage();
         var authInfo = DataHelp.getAuthInf();
         var verificationPage = loginPage.validLogin(authInfo);
@@ -33,7 +37,6 @@ public class MoneyTransferTest {
 
    @Test
     void shouldTransferMoneyBetweenOwnCardsFromFirstTotheSecond() {
-        open("http://localhost:9999");
         var loginPage = new LoginPage();
         var authInfo = DataHelp.getAuthInf();
         var verificationPage = loginPage.validLogin(authInfo);
@@ -54,7 +57,6 @@ public class MoneyTransferTest {
 
     @Test
     void shouldDepositAmountExceedsActualAmount() {
-        open("http://localhost:9999");
        var loginPage = new LoginPage();
         var authInfo = DataHelp.getAuthInf();
         var verificationPage = loginPage.validLogin(authInfo);

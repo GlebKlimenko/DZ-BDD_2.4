@@ -11,7 +11,7 @@ public class DataHelp {
         private String password;
     }
 
-    public static AuthInfo getAuthInf() { return new AuthInfo("vasya", "qwerty123");
+    public static AuthInfo getAuthInfo() { return new AuthInfo("vasya", "qwerty123");
     }
 
     @Value
